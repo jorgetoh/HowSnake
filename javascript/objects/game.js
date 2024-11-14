@@ -116,7 +116,7 @@ class AISnakeGame extends SnakeGame {
                       <p>Amount of dead snakes: ${
                         Object.keys(this.snakeStats).length
                       }</p>
-                      <p>Alive snakes: ${this.snakes.size}</p>
+                      <p>Snakes alive: ${this.snakes.size}</p>
                       <p>Food blocks in-game: ${this.foods.length}</p>`;
 
           displayLeaderboard(leaderboardHTML);
