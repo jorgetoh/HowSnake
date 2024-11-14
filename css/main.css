@@ -1,205 +1,201 @@
 :root {
-    --main-white:#FFFAFA;
-    --main-black: #0C0C0C;
+  --main-white: #fffafa;
+  --main-black: #0c0c0c;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Nimbus Mono PS', 'Courier New', monospace;
-    color: var(--main-white);
-    background-color: var(--main-black);
-    cursor: crosshair;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Nimbus Mono PS", "Courier New", monospace;
+  color: var(--main-white);
+  background-color: var(--main-black);
+  cursor: crosshair;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .flex {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 nav {
-    border: 1px solid var(--main-white);
-    padding: 10px;
-    display: flex;
-    justify-content: end;
-    gap: 8px;
-
+  border: 1px solid var(--main-white);
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 8px;
 }
 
 .box {
-    border: 1px solid var(--main-white);
-    font-weight: normal;
-    padding-left: 10px;
-    padding-right: 10px;
+  border: 1px solid var(--main-white);
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .nav-box {
-    padding: 4px;
-    margin: 2px;
-    cursor: pointer;
+  padding: 4px;
+  margin: 2px;
+  cursor: pointer;
 }
 
 .main-box {
-    text-transform: uppercase;
-    font-style: italic;
-    padding: 6px;
-    margin-right: 20px;
+  text-transform: uppercase;
+  font-style: italic;
+  padding: 6px;
+  margin-right: 20px;
 }
 .main-box-container {
-    flex:1;
-    display: flex;
+  flex: 1;
+  display: flex;
 }
 
 .main-box::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: var(--main-white);
-    position: relative;
-    bottom: -9px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-white);
+  position: relative;
+  bottom: -9px;
 }
 #canva-parent {
-    flex: 1;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 .menu {
-    /* background-color: color-mix(in srgb, var(--main-black), transparent 20%); */
-    background-color: var(--main-black);
-    position: absolute;
-    display: none;
-    flex: wrap;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid var(--main-white);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
+  /* background-color: color-mix(in srgb, var(--main-black), transparent 20%); */
+  background-color: var(--main-black);
+  position: absolute;
+  display: none;
+  flex: wrap;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--main-white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
-.menu-options{
-    display: flex;
-    justify-content: center;
-    flex: wrap;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
+.menu-options {
+  display: flex;
+  justify-content: center;
+  flex: wrap;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
 }
 
 .menu-options::after {
-    content: '';
-    display: block;
-    width: 80%;
-    height: 1px;
-    background-color: var(--main-white);
-    position: absolute;
-    bottom: -5px;
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: var(--main-white);
+  position: absolute;
+  bottom: -5px;
 }
 h1 {
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 p {
-    text-align: center;
+  text-align: center;
 }
 
 .option {
-    padding: 6px;
+  padding: 6px;
 }
 
-input, select {
-    border: 1px solid var(--main-white);
-    background-color: var(--main-black);
-    color: var(--main-white);
-    font-family: 'Nimbus Mono PS', 'Courier New', monospace;
-    text-align: right;
-    margin: 3px;
-    width: 80%;
-
+input,
+select {
+  border: 1px solid var(--main-white);
+  background-color: var(--main-black);
+  color: var(--main-white);
+  font-family: "Nimbus Mono PS", "Courier New", monospace;
+  text-align: right;
+  margin: 3px;
+  width: 80%;
 }
 
 button {
-    background-color: var(--main-black);
-    color: var(--main-white);
-    cursor: pointer;
-    font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+  background-color: var(--main-black);
+  color: var(--main-white);
+  cursor: pointer;
+  font-family: "Nimbus Mono PS", "Courier New", monospace;
 }
 
 .play {
-    font-style: italic;
+  font-style: italic;
 }
 
 .transparent {
-    background-color: color-mix(in srgb, var(--main-black), transparent 20%);
+  background-color: color-mix(in srgb, var(--main-black), transparent 20%);
 }
 
 @keyframes slide-out-left {
-    from {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
-    to {
-        transform: translate(-150%, -50%);
-        opacity: 0;
-    }
+  from {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+  }
 }
 
 @keyframes slide-in-right {
-    from {
-        transform: translate(150%, -50%);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
+  from {
+    transform: translate(150%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .menu.animate-out {
-    animation: slide-out-left 0.5s forwards;
+  animation: slide-out-left 0.5s forwards;
 }
 
 .menu.animate-in {
-    animation: slide-in-right 0.5s forwards;
+  animation: slide-in-right 0.5s forwards;
 }
-
 
 .keybinds {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex: wrap;
 }
-  
-  .keybind {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4px;
-  }
-  .keybind p {
-    margin: 2px;
-  }
 
-  
-  .control p {
-    margin-left: 10px;
-    font-size: 14px;
-    text-align: left;
-  }
-  
+.keybind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4px;
+}
+p {
+  margin: 2px;
+}
+
+.control p {
+  margin-left: 10px;
+  font-size: 14px;
+  text-align: left;
+}
