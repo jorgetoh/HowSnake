@@ -1,39 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HowSnake</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
     <nav>
+      <div class="main-box-container">
+        <div class="box main-box">HowSnake</div>
+      </div>
 
-        <div class="main-box-container">
-            <div class="box main-box">
-                HowSnake
-            </div>
-        </div>
-
-        <div class="box nav-box">
+      <!-- <div class="box nav-box">
             New Game
         </div>
         <div id="reset" class="box nav-box">
             Reset Game
-        </div>
-        <div class="box nav-box">
-            idk
-        </div>
+        </div> -->
     </nav>
 
-    <main id="canva-parent">
-    </main>
+    <main id="canva-parent"></main>
+
+    <div class="menu" id="gamemodes">
+      <h1>🐍 HowSnake</h1>
+
+      <div class="info">
+        <p>
+          This is a small minigame that mixes the classic mechanics of the Snake
+          game with elements from slither.io. It is built using plain
+          JavaScript.
+        </p>
+      </div>
+      <div class="menu-options">
+        Select your gamemode:
+
+        <button class="box option">PvP</button>
+        <button class="box option">vs AI</button>
+      </div>
+    </div>
+
+    <form class="menu" id="pvp-form">
+      <h1>Player vs Player Options</h1>
+
+      <div class="keybinds">
+        <div class="keybind">
+          <p>Player 1 Keybinds</p>
+          <p>W A S D</p>
+        </div>
+        <div class="keybind">
+          <p>Player 2 Keybinds</p>
+          <p>🡡 🡨 🡫 🡪</p>
+        </div>
+      </div>
+
+      <div class="menu-options">
+        <div class="box option">
+          <label for="initial-food">Initial amount of food:</label>
+          <input
+            type="number"
+            id="initial-food"
+            name="initial-food"
+            min="1"
+            value="10"
+          />
+        </div>
+        <div class="box option">
+          <label for="respawn-food">Respawn food after eating:</label>
+          <select id="respawn-food" name="respawn-food">
+            <option value="true" selected>True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="menu-options">
+        <div class="box option">
+          <label for="initial-snake-size">Initial snake size</label>
+          <input
+            type="number"
+            id="initial-snake-size"
+            name="initial-snake-size"
+            min="1"
+            value="5"
+          />
+        </div>
+        <div class="box option">
+          <label for="win-size">Size to win (-1 unlimited)</label>
+          <input
+            type="number"
+            id="win-size"
+            name="win-size"
+            min="-1"
+            value="-1"
+          />
+        </div>
+      </div>
+
+      <div class="menu-options">
+        <div class="box option">
+          <label for="frames-per-second">Frames per second (Speed)</label>
+          <input
+            type="number"
+            id="frames-per-second"
+            name="frames-per-second"
+            min="1"
+            value="20"
+          />
+        </div>
+        <div class="box option">
+          <label for="frames-multiplier">Frames multiplier</label>
+          <input
+            type="number"
+            id="frames-multiplier"
+            name="frames-multiplier"
+            min="1"
+            value="1"
+          />
+        </div>
+      </div>
+      <div class="flex">
+        <button class="box option go-back" type="button">Go back</button>
+        <button class="box option play" type="submit" id="play-pvp">
+          PLAY
+        </button>
+      </div>
+    </form>
+
+    <form class="menu" id="vs-ai-form">
+      <h1>Versus AI Options</h1>
+
+      <div class="keybinds">
+        <div class="keybind">
+          <p>Player Keybinds</p>
+          <p>🡡 🡨 🡫 🡪</p>
+        </div>
+      </div>
+
+      <div class="menu-options">
+        <div class="box option">
+          <label for="initial-food">Initial amount of food:</label>
+          <input
+            type="number"
+            id="initial-food"
+            name="initial-food"
+            min="1"
+            value="50"
+          />
+        </div>
+        <div class="box option">
+          <label for="initial-snake-size-min">Initial snake size (min):</label>
+          <input
+            type="number"
+            id="initial-snake-size-min"
+            name="initial-snake-size-min"
+            min="1"
+            value="5"
+          />
+        </div>
+        <div class="box option">
+          <label for="initial-snake-size-max">Initial snake size (max):</label>
+          <input
+            type="number"
+            id="initial-snake-size-max"
+            name="initial-snake-size-max"
+            min="1"
+            value="15"
+          />
+        </div>
+      </div>
+
+      <div class="menu-options">
+        <div class="box option">
+          <label for="frames-per-second-ai">Frames per second:</label>
+          <input
+            type="number"
+            id="frames-per-second-ai"
+            name="frames-per-second-ai"
+            min="1"
+            value="20"
+          />
+        </div>
+        <div class="box option">
+          <label for="ai-snakes">Amount of AI snakes to spawn:</label>
+          <input
+            type="number"
+            id="ai-snakes"
+            name="ai-snakes"
+            min="1"
+            value="10"
+          />
+        </div>
+      </div>
+
+      <div class="menu-options">
+        <div class="box option">
+          <label for="respawn-snakes"
+            >Amount of snakes to spawn after snake die:</label
+          >
+          <input
+            type="number"
+            id="respawn-snakes"
+            name="respawn-snakes"
+            min="0"
+            value="1"
+          />
+        </div>
+        <div class="box option">
+          <label for="spawn-edges">Spawn in edges:</label>
+          <select id="spawn-edges" name="spawn-edges">
+            <option value="true">true</option>
+            <option value="false" selected>false</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex">
+        <button class="box option go-back" type="button">Go back</button>
+        <button class="box option play" type="submit" id="play-ai">PLAY</button>
+      </div>
+    </form>
+
+    <div class="menu transparent" id="leaderboard-menu">
+      <div class="menu-content"></div>
+      <button class="box option go-back">Go back</button>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="./javascript/index.js"></script>
+    <script src="./javascript/objects/game.js"></script>
     <script src="./javascript/objects/snake.js"></script>
-    <script src="./javascript/objects/robot_snake.js"></script>
     <script src="./javascript/draw.js"></script>
-
-</body>
+  </body>
 </html>
