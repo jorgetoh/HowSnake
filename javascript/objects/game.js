@@ -113,7 +113,7 @@ class AISnakeGame extends SnakeGame {
                       }, Time alive: ${formatTime(
             this.snakeStats.player.deathTime - this.snakeStats.player.spawnTime
           )}</p>
-                      <p>Amount of death snakes: ${
+                      <p>Amount of dead snakes: ${
                         Object.keys(this.snakeStats).length
                       }</p>
                       <p>Alive snakes: ${this.snakes.size}</p>
